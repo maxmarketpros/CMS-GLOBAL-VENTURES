@@ -8,7 +8,7 @@ export const wills: Service = {
   oneLiner:
     "A simple, signed document that names your guardians, executors, and beneficiaries.",
   h1: "Last Will & Testament Services in Granite Shoals, TX",
-  metaTitle: "Wills in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Wills in Granite Shoals, TX",
   metaDescription:
     "Last will & testament preparation in Granite Shoals, TX. Custom Texas wills that name guardians, appoint executors, and protect your family.",
   heroPhoto: "/stock/2.jpg",

@@ -5,7 +5,7 @@ export const spicewood: Area = {
   city: "Spicewood",
   county: "Burnet County",
   h1: "Estate Planning & Trust Services in Spicewood, TX",
-  metaTitle: "Spicewood Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Spicewood Estate Planning & Trusts",
   metaDescription:
     "Estate planning and asset protection for Spicewood, TX. Custom trust structures for Lake Travis homeowners, business owners, and retired professionals.",
   intro:

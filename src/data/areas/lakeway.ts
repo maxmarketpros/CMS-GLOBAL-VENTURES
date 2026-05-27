@@ -5,7 +5,7 @@ export const lakeway: Area = {
   city: "Lakeway",
   county: "Travis County",
   h1: "Lakeway Estate Planning Specialists — Trust Services for Lake Travis Families",
-  metaTitle: "Lakeway Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Lakeway Estate Planning & Trusts",
   metaDescription:
     "Estate planning, trust formation, and asset protection for Lakeway, TX. High-net-worth planning for Lake Travis professionals, executives, and retirees.",
   intro:

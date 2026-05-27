@@ -5,7 +5,7 @@ export const kingsland: Area = {
   city: "Kingsland",
   county: "Llano County",
   h1: "Trust & Estate Services for Kingsland, TX Residents",
-  metaTitle: "Kingsland Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Kingsland Estate Planning & Trusts",
   metaDescription:
     "Trust formation and estate planning for Kingsland, TX families. Custom plans for Lake LBJ homeowners, retirees, and Hill Country business owners.",
   intro:

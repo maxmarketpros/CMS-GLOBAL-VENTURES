@@ -4,7 +4,7 @@ import { Section, SectionHeader } from "@/components/Section";
 import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "Schedule Your Free Consultation | CMS Global Ventures",
+  title: "Schedule Your Free Consultation",
   description:
     "Schedule your free 30-minute consultation with CMS Global Ventures. No cost. No obligation. We'll tell you exactly what we'd recommend and what it costs.",
   alternates: { canonical: "/free-consultation/" },

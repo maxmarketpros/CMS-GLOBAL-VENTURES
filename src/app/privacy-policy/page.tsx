@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | CMS Global Ventures",
+  title: "Privacy Policy",
   description: "Privacy policy for CMS Global Ventures and cmsglobalventures.com.",
   alternates: { canonical: "/privacy-policy/" },
 };

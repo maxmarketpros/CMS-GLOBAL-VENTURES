@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/PageShell";
 
 export const metadata: Metadata = {
-  title: "Contact CMS Global Ventures — Granite Shoals, TX",
+  title: "Contact — Granite Shoals, TX",
   description:
     "Get in touch with CMS Global Ventures. Phone (512) 234-2864 or email info@cmshomeimprovement.pro. Serving Granite Shoals and the Texas Hill Country.",
   alternates: { canonical: "/contact/" },

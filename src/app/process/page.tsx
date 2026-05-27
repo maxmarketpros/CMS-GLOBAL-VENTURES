@@ -5,7 +5,7 @@ import { ProcessTimeline, defaultProcess } from "@/components/ProcessTimeline";
 import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "Our Process — Estate Planning at CMS Global Ventures",
+  title: "Our Process — Plain-English Estate Planning Steps",
   description:
     "Four steps from first conversation to signed binder. Free consultation, plan design, document drafting, and asset funding — flat fees, no surprises.",
   alternates: { canonical: "/process/" },

@@ -8,7 +8,7 @@ export const irrevocableTrusts: Service = {
   oneLiner:
     "Maximum protection — your assets are legally separated from you for life.",
   h1: "Irrevocable Trust Services in Texas",
-  metaTitle: "Irrevocable Trusts in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Irrevocable Trusts in Granite Shoals, TX",
   metaDescription:
     "Irrevocable trust formation in Granite Shoals, TX. ILITs, SLATs, Medicaid asset-protection trusts, and special-needs trusts for Hill Country families.",
   heroPhoto: "/stock/14.jpg",

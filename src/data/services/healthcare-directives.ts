@@ -9,7 +9,7 @@ export const healthcareDirectives: Service = {
     "Your medical wishes, in writing, so your family is never left guessing.",
   h1: "Healthcare Directives & Living Wills in Texas",
   metaTitle:
-    "Healthcare Directives in Granite Shoals, TX | CMS Global Ventures",
+    "Healthcare Directives in Granite Shoals, TX",
   metaDescription:
     "Advance directives, living wills, and HIPAA authorizations for Granite Shoals, TX families. Make your medical wishes clear before a crisis arrives.",
   heroPhoto: "/stock/22.jpg",

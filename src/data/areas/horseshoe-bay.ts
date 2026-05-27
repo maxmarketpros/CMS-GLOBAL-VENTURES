@@ -5,7 +5,7 @@ export const horseshoeBay: Area = {
   city: "Horseshoe Bay",
   county: "Llano & Burnet Counties",
   h1: "Horseshoe Bay Estate Planning Specialists — Trust Services Built for Lake LBJ",
-  metaTitle: "Horseshoe Bay Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Horseshoe Bay Estate Planning & Trusts",
   metaDescription:
     "Estate planning, asset protection, and trust formation for Horseshoe Bay, TX. Specialized planning for lake-home owners and high-net-worth families on Lake LBJ.",
   intro:

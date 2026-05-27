@@ -5,7 +5,7 @@ export const cottonwoodShores: Area = {
   city: "Cottonwood Shores",
   county: "Burnet County",
   h1: "Trust & Estate Services for Cottonwood Shores Residents",
-  metaTitle: "Cottonwood Shores Estate Planning | CMS Global Ventures",
+  metaTitle: "Cottonwood Shores Estate Planning",
   metaDescription:
     "Trust formation and estate planning for Cottonwood Shores, TX. Straightforward plans designed to keep your family out of Burnet County probate court.",
   intro:

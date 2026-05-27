@@ -8,7 +8,7 @@ export const assetProtection: Service = {
   oneLiner:
     "Layered legal structures that put a wall between you and future claims.",
   h1: "Asset Protection Services in Granite Shoals, TX",
-  metaTitle: "Asset Protection in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Asset Protection in Granite Shoals, TX",
   metaDescription:
     "Asset protection planning in Granite Shoals, TX. Trust structures, LLCs, and entity layering that shield your wealth from lawsuits, creditors, and unforeseen claims.",
   heroPhoto: "/stock/17.jpg",

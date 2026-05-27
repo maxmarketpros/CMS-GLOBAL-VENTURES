@@ -4,7 +4,7 @@ import { Section, SectionHeader } from "@/components/Section";
 import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "Resources | CMS Global Ventures",
+  title: "Resources",
   description:
     "Useful resources and links for Texas estate planning — Texas Bar, Texas Secretary of State, Burnet County, Llano County, IRS, Social Security, and more.",
   alternates: { canonical: "/resources/" },

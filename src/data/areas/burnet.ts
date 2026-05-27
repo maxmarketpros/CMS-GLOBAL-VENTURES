@@ -5,7 +5,7 @@ export const burnet: Area = {
   city: "Burnet",
   county: "Burnet County",
   h1: "Burnet Estate Planning Specialists — Trust Services Built by CMS Global Ventures",
-  metaTitle: "Burnet Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Burnet Estate Planning & Trusts",
   metaDescription:
     "Trust formation and estate planning for Burnet, TX and Burnet County families. Avoid probate, protect family wealth, and plan for the next generation.",
   intro:

@@ -5,7 +5,7 @@ export const beeCave: Area = {
   city: "Bee Cave",
   county: "Travis County",
   h1: "Estate Planning & Trust Services in Bee Cave, TX",
-  metaTitle: "Bee Cave Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Bee Cave Estate Planning & Trusts",
   metaDescription:
     "Estate planning and asset protection for Bee Cave, TX families and business owners. Trust-based plans designed for Austin's Hill Country corridor.",
   intro:

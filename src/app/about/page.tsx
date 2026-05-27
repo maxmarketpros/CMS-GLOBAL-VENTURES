@@ -6,7 +6,7 @@ import { StatsBar } from "@/components/StatsBar";
 import { Icon } from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "About CMS Global Ventures — Granite Shoals Estate Planning",
+  title: "About — Granite Shoals Estate Planning Specialists",
   description:
     "CMS Global Ventures is a Hill Country trust formation, estate planning, and asset protection firm based in Granite Shoals, TX. 500+ plans built. 15+ years serving Texas families.",
   alternates: { canonical: "/about/" },

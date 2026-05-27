@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: "https://cmsglobalventures.com",
   generateRobotsTxt: true,
+  generateIndexSitemap: false,
   outDir: "out",
   trailingSlash: true,
   changefreq: "monthly",

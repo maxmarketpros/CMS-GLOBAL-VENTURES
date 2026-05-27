@@ -5,7 +5,7 @@ export const lagoVista: Area = {
   city: "Lago Vista",
   county: "Travis County",
   h1: "Trust & Estate Services for Lago Vista Residents",
-  metaTitle: "Lago Vista Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Lago Vista Estate Planning & Trusts",
   metaDescription:
     "Trust formation and estate planning for Lago Vista, TX. Custom plans for Lake Travis peninsula homeowners, retirees, and Hill Country families.",
   intro:

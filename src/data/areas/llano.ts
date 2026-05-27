@@ -5,7 +5,7 @@ export const llano: Area = {
   city: "Llano",
   county: "Llano County",
   h1: "Estate Planning & Trust Services in Llano, TX",
-  metaTitle: "Llano County Estate Planning Specialists | CMS Global Ventures",
+  metaTitle: "Llano County Estate Planning Specialists",
   metaDescription:
     "Estate planning, trusts, and asset protection for Llano, TX. Multi-generational ranch and land planning for Llano County families.",
   intro:

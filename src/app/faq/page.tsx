@@ -6,7 +6,7 @@ import { JsonLd, faqSchema } from "@/components/JsonLd";
 import { allFaqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | CMS Global Ventures",
+  title: "Frequently Asked Questions",
   description:
     "Answers to the questions we hear most often about trusts, estate planning, probate, asset protection, and how CMS Global Ventures works.",
   alternates: { canonical: "/faq/" },

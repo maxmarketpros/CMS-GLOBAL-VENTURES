@@ -19,7 +19,10 @@ import { reviews } from "@/data/reviews";
 import { business } from "@/data/business";
 
 export const metadata: Metadata = {
-  title: "Business Trust & Estate Planning in Granite Shoals, TX",
+  title: {
+    absolute:
+      "Business Trust & Estate Planning in Granite Shoals, TX | CMS Global Ventures",
+  },
   description:
     "Trust formation, estate planning, and asset protection specialists serving Granite Shoals, TX and the Texas Hill Country. 500+ trusts established. 15+ years of experience. Schedule your free consultation today.",
   alternates: { canonical: "/" },

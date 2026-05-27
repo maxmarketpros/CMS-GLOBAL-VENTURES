@@ -8,7 +8,7 @@ export const estatePlanning: Service = {
   oneLiner:
     "A complete plan for how your wealth and wishes pass to the next generation.",
   h1: "Estate Planning Services in Granite Shoals, TX",
-  metaTitle: "Estate Planning in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Estate Planning in Granite Shoals, TX",
   metaDescription:
     "Custom estate planning in Granite Shoals, TX and the Texas Hill Country. Wills, trusts, asset protection, and probate-free transfers built around your family. 500+ plans built.",
   heroPhoto: "/stock/12.jpg",

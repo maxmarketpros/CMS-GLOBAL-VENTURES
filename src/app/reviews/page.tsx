@@ -6,7 +6,7 @@ import { ReviewCard } from "@/components/ReviewCard";
 import { reviews } from "@/data/reviews";
 
 export const metadata: Metadata = {
-  title: "Client Reviews | CMS Global Ventures",
+  title: "Client Reviews",
   description:
     "What clients say about working with CMS Global Ventures. Real testimonials from families and business owners across the Texas Hill Country.",
   alternates: { canonical: "/reviews/" },

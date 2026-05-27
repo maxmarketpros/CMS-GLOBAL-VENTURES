@@ -8,7 +8,7 @@ export const powerOfAttorney: Service = {
   oneLiner:
     "Naming someone you trust to act for you if you cannot act for yourself.",
   h1: "Power of Attorney Services in Granite Shoals, TX",
-  metaTitle: "Power of Attorney in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Power of Attorney in Granite Shoals, TX",
   metaDescription:
     "Durable power of attorney preparation in Granite Shoals, TX. Texas-compliant financial and healthcare POAs that protect you and your family during incapacity.",
   heroPhoto: "/stock/4.jpg",

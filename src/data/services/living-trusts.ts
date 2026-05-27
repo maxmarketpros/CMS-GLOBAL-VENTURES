@@ -8,7 +8,7 @@ export const livingTrusts: Service = {
   oneLiner:
     "A revocable trust that keeps your estate private, fast, and out of probate.",
   h1: "Living Trust Services in Granite Shoals, TX",
-  metaTitle: "Living Trusts in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Living Trusts in Granite Shoals, TX",
   metaDescription:
     "Revocable living trust formation in Granite Shoals, TX. Skip Burnet and Llano county probate, protect your privacy, and stay in full control of your assets.",
   heroPhoto: "/stock/11.jpg",

@@ -3,7 +3,7 @@ import { PageShell } from "@/components/PageShell";
 import { Section } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | CMS Global Ventures",
+  title: "Terms of Service",
   description: "Terms of service for CMS Global Ventures and cmsglobalventures.com.",
   alternates: { canonical: "/terms/" },
 };

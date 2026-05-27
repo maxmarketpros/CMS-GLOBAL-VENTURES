@@ -8,7 +8,7 @@ export const businessTrusts: Service = {
   oneLiner:
     "Trust-based structures that protect business owners — and their businesses.",
   h1: "Business Trust Formation in Granite Shoals, TX",
-  metaTitle: "Business Trusts in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Business Trusts in Granite Shoals, TX",
   metaDescription:
     "Business trust formation in Granite Shoals, TX. Custom trust structures that hold LLC interests, shield business assets, and plan succession for Texas owners.",
   heroPhoto: "/stock/3.jpg",

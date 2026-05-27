@@ -5,7 +5,7 @@ export const marbleFalls: Area = {
   city: "Marble Falls",
   county: "Burnet County",
   h1: "Estate Planning & Trust Services in Marble Falls, TX",
-  metaTitle: "Marble Falls Estate Planning & Trusts | CMS Global Ventures",
+  metaTitle: "Marble Falls Estate Planning & Trusts",
   metaDescription:
     "Trust formation, estate planning, and asset protection for Marble Falls, TX families. Hill Country specialists serving the Highland Lakes since 2009.",
   intro:

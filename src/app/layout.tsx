@@ -50,10 +50,11 @@ export const metadata: Metadata = {
     description: business.shortDescription,
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.jpg",
         width: 1200,
-        height: 1200,
-        alt: business.name,
+        height: 630,
+        alt: `${business.name} — Business Trust & Estate Planning, Granite Shoals, TX`,
+        type: "image/jpeg",
       },
     ],
   },
@@ -61,12 +62,29 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Business Trust & Estate Planning in Granite Shoals, TX",
     description: business.shortDescription,
+    images: ["/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
-    icon: [{ url: "/logo.png", type: "image/png" }],
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
   },
+  manifest: "/site.webmanifest",
 };
 
 export const viewport: Viewport = {

@@ -8,7 +8,7 @@ export const probateAssistance: Service = {
   oneLiner:
     "Step-by-step help navigating Texas probate after a loved one's passing.",
   h1: "Probate Assistance Services in Granite Shoals, TX",
-  metaTitle: "Probate Assistance in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Probate Assistance in Granite Shoals, TX",
   metaDescription:
     "Probate assistance in Granite Shoals, Burnet County, and Llano County, TX. Step-by-step guidance through Texas probate after a loved one's passing.",
   heroPhoto: "/stock/9.jpg",

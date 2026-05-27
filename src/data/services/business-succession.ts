@@ -8,7 +8,7 @@ export const businessSuccession: Service = {
   oneLiner:
     "A plan that keeps your business running — and in the right hands — after you step away.",
   h1: "Business Succession Planning in Texas",
-  metaTitle: "Business Succession in Granite Shoals, TX | CMS Global Ventures",
+  metaTitle: "Business Succession in Granite Shoals, TX",
   metaDescription:
     "Business succession planning in Granite Shoals, TX. Trust and buy-sell structures that keep your Texas business running through retirement, disability, or death.",
   heroPhoto: "/stock/6.jpg",
