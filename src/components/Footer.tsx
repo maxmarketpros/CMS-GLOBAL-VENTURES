@@ -12,13 +12,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="relative h-12 w-12 overflow-hidden border border-gold/30 bg-ink-card">
-                <Image src="/logo.png" alt="CMS Global Ventures" fill sizes="48px" className="object-contain p-1" />
-              </div>
-              <div className="font-display text-lg font-semibold text-bone tracking-wide">
-                CMS Global Ventures
-              </div>
+            <Link href="/" className="inline-block mb-5" aria-label="CMS Global Ventures — Home">
+              <Image
+                src="/logo.png"
+                alt="CMS Global Ventures"
+                width={2172}
+                height={574}
+                className="h-16 w-auto"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-bone-muted max-w-xs">
               {business.shortDescription}

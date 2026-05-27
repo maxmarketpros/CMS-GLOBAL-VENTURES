@@ -12,8 +12,10 @@ import { Section, SectionHeader } from "@/components/Section";
 import { AreasGrid } from "@/components/AreasGrid";
 import { Icon } from "@/components/Icon";
 import { JsonLd, faqSchema } from "@/components/JsonLd";
+import { ReviewCard } from "@/components/ReviewCard";
 import { services } from "@/data/services";
 import { homeFaqs } from "@/data/faqs";
+import { reviews } from "@/data/reviews";
 import { business } from "@/data/business";
 
 export const metadata: Metadata = {
@@ -363,31 +365,21 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* REVIEWS PLACEHOLDER */}
+      {/* REVIEWS */}
       <Section className="border-t border-gold/10">
         <SectionHeader
           align="center"
           eyebrow="Client Reviews"
-          title="What our clients say."
-          subtitle="We let our clients speak for us. Verified Google reviews live on our profile."
+          title={<>What our <span className="text-gold">clients say.</span></>}
+          subtitle="Real words from families and business owners across the Texas Hill Country who've built their plans with us."
         />
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="border border-gold/15 bg-ink-card p-8 min-h-[260px] flex flex-col justify-between">
-              <div className="text-gold text-2xl tracking-[0.2em]">★★★★★</div>
-              <div>
-                <div className="font-display text-lg text-bone-muted italic leading-relaxed">
-                  "Reviews coming soon — see our Google profile."
-                </div>
-                <div className="mt-5 text-[10px] uppercase tracking-widest text-bone-dim">
-                  Verified Google Review
-                </div>
-              </div>
-            </div>
+          {reviews.slice(0, 3).map((r) => (
+            <ReviewCard key={r.name} review={r} />
           ))}
         </div>
         <div className="mt-10 text-center">
-          <GoldButton href="/reviews/" variant="ghost">All reviews</GoldButton>
+          <GoldButton href="/reviews/" variant="ghost">Read all reviews</GoldButton>
         </div>
       </Section>
 

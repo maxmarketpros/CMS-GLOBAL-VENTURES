@@ -97,3 +97,80 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
     })),
   };
 }
+
+export function faqPageSchema(items: { q: string; a: string }[]) {
+  return faqSchema(items.map((i) => ({ question: i.q, answer: i.a })));
+}
+
+export function areaLocalBusinessSchema(args: {
+  city: string;
+  county: string;
+  lat: number;
+  lng: number;
+  slug: string;
+  description: string;
+  zip?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: `${business.name} — ${args.city}, TX`,
+    image: `${business.url}/logo.png`,
+    "@id": `${business.url}/areas-served/${args.slug}/#legalservice`,
+    url: `${business.url}/areas-served/${args.slug}/`,
+    telephone: business.phone,
+    email: business.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: business.address.city,
+      addressRegion: business.address.state,
+      postalCode: business.address.zip,
+      addressCountry: business.address.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: args.lat,
+      longitude: args.lng,
+    },
+    areaServed: {
+      "@type": "City",
+      name: args.city,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: args.county,
+      },
+    },
+    priceRange: "$$",
+    description: args.description,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
+    ],
+  };
+}
+
+export function placeSchema(args: {
+  city: string;
+  county: string;
+  lat: number;
+  lng: number;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    name: `${args.city}, TX`,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: args.lat,
+      longitude: args.lng,
+    },
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: args.county,
+    },
+  };
+}

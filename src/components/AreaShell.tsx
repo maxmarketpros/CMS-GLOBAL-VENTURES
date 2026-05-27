@@ -1,40 +1,73 @@
 import Link from "next/link";
 import type { Area } from "@/data/areas";
 import { services } from "@/data/services";
+import { areas } from "@/data/areas";
 import { Hero } from "./Hero";
 import { GoldButton } from "./GoldButton";
-import { ProcessTimeline } from "./ProcessTimeline";
 import { FormSection } from "./FormSection";
 import { Section, SectionHeader } from "./Section";
 import { Breadcrumbs } from "./Breadcrumbs";
-import { AreaChips } from "./AreasGrid";
-import { JsonLd, breadcrumbSchema } from "./JsonLd";
+import {
+  JsonLd,
+  breadcrumbSchema,
+  areaLocalBusinessSchema,
+  placeSchema,
+  faqPageSchema,
+} from "./JsonLd";
 import { business } from "@/data/business";
 import { Icon } from "./Icon";
+import { Sections } from "./sections/Sections";
 
 type Props = { area: Area };
 
 export function AreaShell({ area }: Props) {
+  const faqSection = area.sections.find((s) => s.kind === "faq");
+  const nearbyAreas = area.nearby
+    .map((slug) => areas.find((a) => a.slug === slug))
+    .filter((a): a is Area => a !== undefined);
+
+  const schemas: object[] = [
+    breadcrumbSchema([
+      { name: "Home", url: `${business.url}/` },
+      { name: "Areas Served", url: `${business.url}/areas-served/` },
+      { name: area.city, url: `${business.url}/areas-served/${area.slug}/` },
+    ]),
+    areaLocalBusinessSchema({
+      city: area.city,
+      county: area.county,
+      lat: area.lat,
+      lng: area.lng,
+      slug: area.slug,
+      description: area.metaDescription,
+      zip: area.zip,
+    }),
+    placeSchema({
+      city: area.city,
+      county: area.county,
+      lat: area.lat,
+      lng: area.lng,
+    }),
+  ];
+  if (faqSection && faqSection.kind === "faq") {
+    schemas.push(faqPageSchema(faqSection.items));
+  }
+
   return (
     <>
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", url: `${business.url}/` },
-          { name: "Areas Served", url: `${business.url}/areas-served/` },
-          { name: area.city, url: `${business.url}/areas-served/${area.slug}/` },
-        ])}
-      />
+      <JsonLd data={schemas} />
 
       <Hero
         eyebrow={`Area Served · ${area.county}`}
         title={area.h1}
         subtitle={area.intro}
-        image="/stock/5.jpg"
+        image={area.heroPhoto}
         imageAlt={`Estate planning and trust services for ${area.city}, TX`}
         size="compact"
       >
         <div className="flex flex-col sm:flex-row gap-4">
-          <GoldButton href={business.primaryCta.href}>Schedule Free Consultation</GoldButton>
+          <GoldButton href={business.primaryCta.href}>
+            Schedule Free Consultation
+          </GoldButton>
           <a
             href={business.phoneHref}
             className="inline-flex items-center gap-2 px-7 py-3.5 border border-gold/40 text-gold text-[11px] font-semibold uppercase tracking-widest hover:border-gold hover:bg-gold/5 transition-all"
@@ -57,60 +90,14 @@ export function AreaShell({ area }: Props) {
         </div>
       </div>
 
-      {/* Local context */}
-      <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          <div className="lg:col-span-7">
-            <SectionHeader
-              eyebrow={`Local · ${area.city}, TX`}
-              title={<>Built for {area.city} families.</>}
-              subtitle={area.localHook}
-            />
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-px bg-gold/10 border border-gold/10">
-              <div className="bg-ink-card p-6">
-                <div className="text-[10px] uppercase tracking-widest text-gold mb-2">Drive Time</div>
-                <div className="font-display text-xl text-bone leading-tight">{area.driveTime}</div>
-              </div>
-              <div className="bg-ink-card p-6">
-                <div className="text-[10px] uppercase tracking-widest text-gold mb-2">County</div>
-                <div className="font-display text-xl text-bone leading-tight">{area.county}</div>
-              </div>
-              <div className="bg-ink-card p-6">
-                <div className="text-[10px] uppercase tracking-widest text-gold mb-2">Population</div>
-                <div className="font-display text-xl text-bone leading-tight">{area.population ?? "—"}</div>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-5">
-            <div className="border border-gold/20 bg-ink-card p-8">
-              <div className="text-[10px] uppercase tracking-widest text-gold mb-5">
-                Landmarks We Know
-              </div>
-              <ul className="space-y-3">
-                {area.landmarks.map((l) => (
-                  <li key={l} className="flex items-center gap-3 text-bone">
-                    <span className="h-1 w-1 bg-gold" />
-                    {l}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 pt-6 border-t border-ink-border">
-                <a href={business.phoneHref} className="block">
-                  <div className="text-[10px] uppercase tracking-widest text-bone-dim">Call us about {area.city}</div>
-                  <div className="font-display text-2xl text-gold mt-1">{business.phone}</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <Sections sections={area.sections} />
 
-      {/* Services available in this area */}
-      <Section className="border-t border-gold/10 !pt-20">
+      {/* Services available in this area — kept at shell level for cross-linking */}
+      <Section className="border-t border-gold/10">
         <SectionHeader
-          eyebrow="What We Build"
-          title={`Trust and estate planning services for ${area.city}.`}
-          subtitle="Every service below is available to clients in this area. Most clients use two or three together in a single plan."
+          eyebrow="Available locally"
+          title={`Every service we offer, available in ${area.city}.`}
+          subtitle="The chips below link to the full service pages. Most clients combine two or three services into a single plan."
         />
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-gold/10 border border-gold/10">
           {services.map((s) => (
@@ -130,27 +117,31 @@ export function AreaShell({ area }: Props) {
         </div>
       </Section>
 
-      {/* Process */}
+      {/* Nearby areas — uses area.nearby for tighter local internal linking */}
       <Section className="border-t border-gold/10">
         <SectionHeader
-          eyebrow="Our Process"
-          title="The same plan, wherever you live."
-          subtitle="Whether your home is in Marble Falls or Lago Vista, our four-step process is the same."
+          eyebrow="Nearby in the Hill Country"
+          title={`Communities near ${area.city} we also serve.`}
+          subtitle="These are the closest cities in our coverage map — each with its own dedicated planning page."
         />
-        <div className="mt-14">
-          <ProcessTimeline />
-        </div>
-      </Section>
-
-      {/* Other areas */}
-      <Section className="border-t border-gold/10">
-        <SectionHeader
-          eyebrow="Other Hill Country Areas"
-          title="Where else we work."
-          subtitle="We serve families and business owners across the Highland Lakes and Texas Hill Country."
-        />
-        <div className="mt-10">
-          <AreaChips excludeSlug={area.slug} />
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {nearbyAreas.map((n) => (
+            <Link
+              key={n.slug}
+              href={`/areas-served/${n.slug}/`}
+              className="lift block border border-gold/15 bg-ink-card p-6 group"
+            >
+              <div className="text-[10px] uppercase tracking-widest text-gold mb-2">
+                {n.county}
+              </div>
+              <div className="font-display text-xl text-bone group-hover:text-gold transition-colors leading-tight">
+                {n.city}, TX
+              </div>
+              <div className="mt-2 text-xs text-bone-muted">
+                {n.driveTime}
+              </div>
+            </Link>
+          ))}
         </div>
       </Section>
 

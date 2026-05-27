@@ -37,25 +37,15 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group flex-shrink-0 min-w-0">
-            <div className="relative h-11 w-11 overflow-hidden border border-gold/30 bg-ink-card transition-colors group-hover:border-gold/70 flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="CMS Global Ventures"
-                fill
-                sizes="44px"
-                className="object-contain p-1"
-                priority
-              />
-            </div>
-            <div className="leading-tight whitespace-nowrap">
-              <div className="font-display text-base sm:text-lg font-semibold text-bone tracking-wide">
-                CMS Global Ventures
-              </div>
-              <div className="hidden xl:block text-[10px] uppercase tracking-widest text-bone-dim">
-                Estate Planning · Trusts · Asset Protection
-              </div>
-            </div>
+          <Link href="/" className="flex items-center flex-shrink-0 group" aria-label="CMS Global Ventures — Home">
+            <Image
+              src="/logo.png"
+              alt="CMS Global Ventures"
+              width={2172}
+              height={574}
+              priority
+              className="h-12 sm:h-14 lg:h-16 w-auto transition-opacity group-hover:opacity-90"
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -153,8 +143,8 @@ export function Header() {
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden bg-ink/95 backdrop-blur-xl overflow-y-auto">
           <div className="flex h-20 items-center justify-between px-4 border-b border-gold/10">
-            <Link href="/" onClick={() => setOpen(false)} className="font-display text-lg font-semibold text-bone tracking-wide">
-              CMS Global Ventures
+            <Link href="/" onClick={() => setOpen(false)} aria-label="CMS Global Ventures — Home">
+              <Image src="/logo.png" alt="CMS Global Ventures" width={2172} height={574} className="h-10 w-auto" />
             </Link>
             <button onClick={() => setOpen(false)} className="p-2 text-bone hover:text-gold" aria-label="Close menu">
               <Icon name="x" size={24} strokeWidth={2} />

@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageShell } from "@/components/PageShell";
 import { Section, SectionHeader } from "@/components/Section";
+import { ReviewCard } from "@/components/ReviewCard";
+import { reviews } from "@/data/reviews";
 
 export const metadata: Metadata = {
   title: "Client Reviews | CMS Global Ventures",
   description:
-    "What clients say about working with CMS Global Ventures. Verified Google reviews from families and business owners across the Texas Hill Country.",
+    "What clients say about working with CMS Global Ventures. Real testimonials from families and business owners across the Texas Hill Country.",
   alternates: { canonical: "/reviews/" },
 };
 
@@ -19,7 +21,7 @@ export default function ReviewsPage() {
           What our clients <span className="text-gold">say about us.</span>
         </>
       }
-      subtitle="We let our clients speak for us. Below is a placeholder for verified Google reviews — drop in real reviews as they come in."
+      subtitle="Six families and business owners. Six plans built. Six reasons we keep doing what we do."
       heroImage="/stock/4.jpg"
       heroImageAlt="CMS Global Ventures client reviews"
       crumbs={[{ name: "Home", href: "/" }, { name: "Reviews" }]}
@@ -27,24 +29,13 @@ export default function ReviewsPage() {
       <Section>
         <SectionHeader
           align="center"
-          eyebrow="Coming Soon"
-          title={<>Verified <span className="text-gold">Google Reviews.</span></>}
-          subtitle="We're working on collecting and publishing verified reviews here. In the meantime, ask us for references in your first consultation — we'll connect you with happy clients in your area."
+          eyebrow="Verified Clients"
+          title={<>Five stars, <span className="text-gold">six stories.</span></>}
+          subtitle="A snapshot of recent feedback from across Granite Shoals, Marble Falls, Horseshoe Bay, Kingsland, Spicewood, and Lakeway."
         />
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="border border-gold/15 bg-ink-card p-8 min-h-[300px] flex flex-col justify-between">
-              <div className="text-gold text-2xl tracking-[0.2em]">★★★★★</div>
-              <div>
-                <p className="font-display text-lg text-bone-muted italic leading-relaxed">
-                  "Review coming soon. See our Google Business profile for current verified reviews."
-                </p>
-                <div className="mt-6 flex items-center gap-3 text-[10px] uppercase tracking-widest text-bone-dim">
-                  <span className="h-px w-6 bg-gold/40" />
-                  Verified Google Review
-                </div>
-              </div>
-            </div>
+          {reviews.map((r) => (
+            <ReviewCard key={r.name} review={r} />
           ))}
         </div>
       </Section>
@@ -64,10 +55,10 @@ export default function ReviewsPage() {
               Want to talk to past clients?
             </h2>
             <p className="text-base leading-relaxed text-bone-muted mb-6">
-              Ask. We've worked with hundreds of families across the Hill Country and we're happy to connect you with clients in your area, your situation, or your line of work — with their permission, of course.
+              Ask. We&apos;ve worked with hundreds of families across the Hill Country and we&apos;re happy to connect you with clients in your area, your situation, or your line of work &mdash; with their permission, of course.
             </p>
             <p className="text-base leading-relaxed text-bone-muted">
-              We find it's the single best way for new clients to get a real sense of how we work.
+              We find it&apos;s the single best way for new clients to get a real sense of how we work.
             </p>
           </div>
         </div>
